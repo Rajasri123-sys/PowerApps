@@ -132,4 +132,617 @@ Form pages use the new command bar with refreshed headers, tabs, sections, and b
 
 
 
+
+✅ POWERAPPS COMMANDS — FULL HANDBOOK (BEGINNER TO ADVANCED)
+
+Includes:
+✔ Formulas
+✔ Functions
+✔ Controls properties
+✔ Examples
+✔ When & where to use
+
+
+---
+
+🟦 1. PowerApps BASIC FUNCTIONS
+
+1.1 Set()
+
+Stores a global variable usable anywhere in the app.
+
+Syntax
+
+Set(VariableName, Value)
+
+Use Case
+
+Store login username
+
+Store selected item
+
+Store flags for navigation
+
+
+Example
+
+Set(CurrentUser, User().FullName)
+
+
+---
+
+1.2 UpdateContext()
+
+Creates a local screen variable only for the current screen.
+
+Syntax
+
+UpdateContext({VarName: Value})
+
+
+---
+
+1.3 Navigate()
+
+Navigate to another screen.
+
+Syntax
+
+Navigate(ScreenName, ScreenTransition)
+
+Example
+
+Navigate(Screen_Details, ScreenTransition.Fade)
+
+
+---
+
+1.4 Collect()
+
+Adds records to a collection.
+
+Collect(MyCollection, {ID:1, Name:"Raju"})
+
+
+---
+
+1.5 ClearCollect()
+
+Clears existing records and loads fresh data.
+
+ClearCollect(ProductList, Products)
+
+
+---
+
+1.6 Clear()
+
+Deletes all data in a collection.
+
+Clear(CartItems)
+
+
+---
+
+1.7 Patch()
+
+Creates or updates data in SharePoint / Dataverse / SQL / Excel.
+
+Insert record
+
+Patch(Employees, Defaults(Employees), {Name:"John", Age:32})
+
+Update record
+
+Patch(Employees, ThisItem, {Status:"Approved"})
+
+
+---
+
+1.8 Defaults()
+
+Provides default template for a new record.
+
+Defaults(Employees)
+
+
+---
+
+1.9 SubmitForm()
+
+Saves the form to data source.
+
+SubmitForm(EditForm1)
+
+
+---
+
+1.10 Reset()
+
+Resets a control to default state.
+
+Reset(TextInput1)
+
+
+---
+
+🟦 2. Text Functions
+
+2.1 Concatenate()
+
+Joins multiple texts.
+
+Concatenate("Hello ", User().FullName)
+
+
+---
+
+2.2 & Operator
+
+Another way to join text.
+
+"Hello " & User().FullName
+
+
+---
+
+2.3 Left(), Right(), Mid()
+
+Extracts text.
+
+Left("PowerApps", 5) → "PowerA"
+Right("PowerApps", 4) → "Apps"
+Mid("PowerApps", 2, 4) → "ower"
+
+
+---
+
+2.4 Len()
+
+Counts characters.
+
+
+---
+
+2.5 Lower(), Upper(), Proper()
+
+Converts text case.
+
+
+---
+
+2.6 Substitute()
+
+Find & replace text.
+
+Substitute("Raju Kumar", "Kumar", "Singh")
+
+
+---
+
+2.7 Trim() / TrimEnds()
+
+Removes spaces.
+
+
+---
+
+🟦 3. Math & Logic Functions
+
+3.1 If()
+
+Basic condition.
+
+If(Age > 18, "Adult", "Minor")
+
+
+---
+
+3.2 Switch()
+
+Multiple conditions.
+
+
+---
+
+3.3 Round(), RoundUp(), RoundDown()
+
+
+---
+
+3.4 Max(), Min(), Abs()
+
+
+---
+
+3.5 Rand()
+
+Random number.
+
+
+---
+
+🟦 4. Collection & Table Functions
+
+4.1 Filter()
+
+Filter records.
+
+Filter(Employees, Department="HR")
+
+
+---
+
+4.2 Sort(), SortByColumns()
+
+SortByColumns(Employees, "Name", Ascending)
+
+
+---
+
+4.3 Search()
+
+Search in table.
+
+Search(Employees, SearchBox.Text, "Name")
+
+
+---
+
+4.4 LookUp()
+
+Find single record.
+
+LookUp(Employees, ID = 1001)
+
+
+---
+
+4.5 AddColumns()
+
+Adds new calculated column.
+
+AddColumns(ProductList, "TotalPrice", Price * Qty)
+
+
+---
+
+4.6 Remove(), RemoveIf()
+
+Delete records.
+
+
+---
+
+4.7 ForAll()
+
+Loop through a table.
+
+ForAll(
+    ProductList,
+    Patch(Orders, Defaults(Orders), {Product: Name, Qty: Quantity})
+)
+
+
+---
+
+🟦 5. Date & Time Functions
+
+Today()
+
+Now()
+
+DateAdd()
+
+DateDiff()
+
+Weekday()
+
+Time()
+
+Text() for formatting date
+
+
+Example
+
+Text(Today(), "dd-mm-yyyy")
+
+
+---
+
+🟦 6. Form Functions
+
+6.1 EditForm()
+
+Switch form to edit mode.
+
+EditForm(Form1)
+
+
+---
+
+6.2 NewForm()
+
+New form mode.
+
+
+---
+
+6.3 ViewForm()
+
+View-only mode.
+
+
+---
+
+6.4 SubmitForm()
+
+
+---
+
+6.5 ResetForm()
+
+
+---
+
+🟦 7. Controls Properties
+
+Here are important properties used in every component.
+
+7.1 Visible
+
+Hide/Show components.
+
+If(User().Email="admin@abc.com", true, false)
+
+
+---
+
+7.2 DisplayMode
+
+Makes a control editable, view-only, or disabled.
+
+DisplayMode.Disabled
+
+
+---
+
+7.3 Items
+
+Used in dropdown, galleries, combo box.
+
+Items = Employees
+
+
+---
+
+7.4 Default
+
+Default value for input controls.
+
+
+---
+
+7.5 OnSelect
+
+Action when clicked.
+
+Navigate(Screen2)
+
+
+---
+
+7.6 OnChange
+
+Triggers on user input change.
+
+
+---
+
+7.7 OnVisible
+
+Runs whenever the screen becomes visible.
+
+OnVisible = ClearCollect(List, Employees)
+
+
+---
+
+🟦 8. Gallery Functions
+
+8.1 ThisItem
+
+Represents current item inside gallery.
+
+
+---
+
+8.2 Selected
+
+Selected item from gallery.
+
+Gallery1.Selected
+
+
+---
+
+8.3 TemplateFill
+
+Change color based on condition.
+
+If(ThisItem.Status="Pending", Yellow, White)
+
+
+---
+
+🟦 9. Media Functions
+
+Camera Photo: Camera1.Photo
+
+Camera Stream: Camera1.Stream
+
+Audio: Audio1.Media
+
+
+
+---
+
+🟦 10. JSON & Data Conversion
+
+10.1 JSON()
+
+Convert PowerApps data → JSON.
+
+JSON(Employees, JSONFormat.Compact)
+
+10.2 ParseJSON()
+
+Convert JSON → PowerApps record/table.
+
+
+---
+
+🟦 11. Error Handling
+
+11.1 Errors()
+
+Returns SharePoint, SQL, Dataverse errors.
+
+
+---
+
+11.2 IfError()
+
+Runs alternative logic when error occurs.
+
+IfError(
+    Patch(Employees, ...),
+    Notify("Failed!", NotificationType.Error)
+)
+
+
+---
+
+🟦 12. Notify()
+
+Display toast message.
+
+Notify("Record saved!", NotificationType.Success)
+
+
+---
+
+🟦 13. User() Function
+
+Get current user details.
+
+User().FullName
+User().Email
+User().Image
+
+
+---
+
+🟦 14. PowerAutomate Integration
+
+14.1 Call Flow
+
+MyFlow.Run(Param1, Param2)
+
+
+---
+
+🟦 15. Components & Reuse
+
+15.1 Component Input Property
+
+Pass value from screen to component.
+
+
+---
+
+15.2 Component Output Property
+
+Return result from component.
+
+
+---
+
+🟦 16. SharePoint Commands
+
+Form Integration
+
+SharePointIntegration.OnSave
+
+SharePointIntegration.OnEdit
+
+
+
+---
+
+Patch with People Picker
+
+Patch(List, Selected, {Manager: {Claims: User().Email}})
+
+
+---
+
+🟦 17. Security Functions
+
+IsBlank()
+
+IsEmpty()
+
+IsNumeric()
+
+IsMatch() for regex validation
+
+Coalesce()
+
+Errors()
+
+
+
+---
+
+🟦 18. Performance Commands
+
+Concurrent() Runs multiple commands in parallel.
+
+
+Concurrent(
+    ClearCollect(List1, Data1),
+    ClearCollect(List2, Data2)
+)
+
+With() Temporary variables inside formula.
+
+
+
+---
+
+🟦 19. Device Functions
+
+Connection.Connected – check internet
+
+Network() – connection type
+
+Location.Latitude / Longitude
+
+
+
+---
+
+🟦 20. AI Commands
+
+AI Builder functions
+
+Text Recognizer
+
+Image Recognizer
+
+Prediction Models
+
+
+
 https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpower-apps%2Fmaker%2Ftoc.json
