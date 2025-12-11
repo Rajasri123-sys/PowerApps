@@ -1,0 +1,130 @@
+Power Apps is a suite of apps, services, and connectors, as well as a data platform, that provides a rapid development environment to build custom apps for your business needs. With Power Apps, you can quickly build custom business apps that connect to your data stored either in the underlying data platform (Microsoft Dataverse) or in many online and on-premises data sources (such as SharePoint, Microsoft 365, Dynamics 365, SQL Server, and so on). Apps built with Power Apps provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes. What's more, apps built with Power Apps have a responsive design and can run seamlessly in browser and on mobile devices (phone or tablet). Power Apps "democratizes" the business-app-building experience by enabling users to create feature-rich, custom business apps without writing code. Power Apps also provides an extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data 
+
+Overview of creating apps in Power Apps
+Power Apps is a high-productivity development platform for business apps. It has these major
+components:
+Plans
+Copilot
+Canvas apps
+Model-driven apps
+Microsoft Dataverse
+
+Canvas apps
+Canvas apps start with your user experience. You craft a highly tailored interface with the power of a blank canvas and connect it to your choice of more than 200 data sources. You can build canvas apps for web, mobile, and tablet applications. Canvas apps give you the flexibility to arrange the user experience and interface the way you want it. Let your creativity and business sense guide how you want your apps to look and feel.
+You can start to build your app from Microsoft tools where your data lives, such as:
+From a SharePoint list
+From a Power BI dashboard
+Creating a canvas app is easy. With Power Apps, you can find or create your app in several
+ways:
+From a Dataverse source
+From data in a SharePoint List
+From Excel data
+From a blank canvas
+Via AppSource
+In addition to creating apps in Power Apps, you can also create apps directly within Microsoft Teams by using Power Apps. For more information, see Create apps in Microsoft Teams by using Power Apps
+
+Model-driven apps
+Model-driven apps start with your data model. You build up from the shape of your core
+business data and processes in the Dataverse to model forms, views, and other components.
+Model-driven apps automatically generate a great UI that's responsive across devices.
+When you create a model-driven app, you can use all the power of the Dataverse to rapidly
+configure your forms, business rules, and process flows. You create a model-driven app from
+the Power Apps site.
+As part of the custom page public preview, you can add the new page type based on canvas
+into a new or existing model-driven app. This addition brings the power and flexibility of a
+canvas experience within the model-driven app. Custom pages allow
+Full control over page layout
+Out of box controls and custom components
+Power Apps connectors
+Low-code authoring
+
+Dataverse
+Dataverse is the data platform that comes with Power Apps and allows you to store and model
+business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales,
+Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you're
+a Dynamics 365 customer, your data is already in Dataverse.
+Dataverse allows you to securely store and manage data within a set of standard and custom
+tables. You can add columns to those tables when you need them.
+
+Note
+Every member in an organization can use 
+the default environment. Like any
+environment, users can see apps where they have enough privileges to use an app.
+All users with the Environment Maker security role in an environment can see all
+model-driven apps in that environment, including the default environment. More
+information: 
+Model-driven app privileges to view and access apps.
+When you create an app in one environment, you can't see it from another
+environment. People who want to run your app need access to the environment
+where you created it.
+
+Can I work in Power Apps in both my home tenant and a resource
+tenant?
+Yes, but only in separate browser sessions. For example, Microsoft Edge can be open in its
+standard mode, and you can start a separate session in a new InPrivate window.
+If you open multiple tabs in the same browser session, only resources in the most recently
+signed-in tenant are accessible.
+
+1 – Left navigation pane
+Legend:
+1. Home: Takes you to the Power Apps home page.
+2. Create: Create apps as such as canvas apps, model-driven apps, chatbots, and AI models.
+3. Learn: The learn hub lets you explore documents, training material, get help from the
+Power Apps community, and other resources that help you to create and build Power
+Apps.
+4. Plans: View and edit your plans. More information: Overview of Plan designer.
+5. Apps: If you've created an app or someone else has created one and shared it with you,
+you can play or edit it. You can also filter the list of apps based on criteria such as whether
+you opened it recently.
+6. AI hub: Create and use AI models that optimize your business processes. More
+information: Overview of AI Builder.
+7. Your most used pages such as Tables, Connections, Flows: When you first sign in the top
+three pages that you use most are pinned to the left navigation pane. Use the More
+option to unpin any of these pages and pin something else.
+8. More: Pin your most used items to the left navigation such as tables, flows, and more.
+9. Power Platform: Explore other Power Platform products or service.
+
+ Build apps
+Build apps that provide rich business logic and workflow capabilities to transform manual
+business operations into digital, automated processes.
+To create an app, select Create and then choose from the following options:
+Start with Copilot: Build apps through conversation
+Start with data: Create a canvas app using Microsoft Dataverse or Create a canvas app
+based on Excel data
+Start with a blank app: Create a blank canvas app from scratch
+Start with a page design: Select the type of app you want to create. Use the Filter option
+in the top-right to narrow templates by app type or features like offline use, responsive
+design, or embedding into other Microsoft 365 products. More information: Overview of
+creating apps in Power Apps.
+Start with an app template: Choose from app templates, including data-centered
+templates for mobile apps.
+Apps: On the Home page, find the apps that you own or apps that are shared with you.
+You also have the option to filter and sort apps quickly to find the app you're looking for.
+Hover over the app name to Edit, **Play, or select Commands to perform various actions
+such as share the app, view app details, and access app settings.
+
+Add an app to Microsoft Teams
+Microsoft Teams is a chat-based collaboration platform built on Office 365 technologies.You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams.
+
+A model-driven app has multiple components including dashboards, forms, views, charts, and business processes that make the app easy to use. Model-driven apps can also include AI features that let users to supervise and interact with agents around business processes more efficiently and productively
+What's included with the modern, refreshed look
+Here's what you can expect in the modern, refreshed experience:
+Updated styling in form, view, and dashboard pages, which includes the use of drop
+shadows and brighter background colors to create an elevated or floating appearance.
+The floating appearance helps to visually separate sections and focuses attention on
+primary content.
+New Fluent-based controls in forms, business process flows, and dialogs. Dialogs now
+resize height automatically based on the content.
+A new Power Apps grid in place of the read-only grid in view and standard, dashboard
+pages.
+A new mechanism for customizing the app header colors to match your personal or
+organizational branding. Learn more in Use modern themes.
+An end user setting called Try the new look that turns on the modern, refreshed
+experience
+Command bar:
+The floating command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. 
+View Pages:
+View pages use the new command bar and with updated grid areas that take advantage of the elevation changes to help draw the user's attention.The most significant change on view pages is the switch from the read-only grid to the PowerApps grid control, which features infinite scrolling for a modern, data browsing experience. This grid also appears in subgrids and associated grids in main forms and dashboards. The Power Apps grid control also supports inline editing using the Enable filtering property. Makers can manually configure their editable grids to use the Power Apps grid control.
+Form Pages:
+Form pages use the new command bar with refreshed headers, tabs, sections, and business process flows. Quick views, card forms, headers, sitemaps, and timeline controls also feature updating styling.
+
